@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require('../app-data');
+const app = require('../app_data');
 
 const signUp = (success, failure, data) => {
   $.ajax({

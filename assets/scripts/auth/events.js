@@ -11,7 +11,7 @@ const signCheck = function() {
     let data = getFormFields(this);
     authApi.signUp(authUi.success, authUi.failure, data);
 
-    $('#SignUpModal').modal('hide'); //hide modal after sign-in
+    $('#myModal').modal('hide'); //hide modal after sign-in
       return false;
   });
     $('#sign-in').on('submit', function(event){
@@ -20,7 +20,7 @@ const signCheck = function() {
       console.log(data);
       authApi.signIn(authUi.signInSuccess, authUi.failure, data);
 
-      $('#SignUpModal').modal('hide'); //hide modal after sign-in
+      $('#myModal').modal('hide'); //hide modal after sign-in
         return false;
 
     });
