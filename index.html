@@ -47,9 +47,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li class="signIn"><a href="#">Sign In</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
@@ -80,8 +80,10 @@
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.</p>
+      <table class="content">
+      </table>
 
-<!-- Modal -->
+<!-- Sign Up Modal -->
 <div class="modal fade signUp" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -103,13 +105,49 @@
               <input type="password" class="form-control" name="credentials[password]" placeholder="Confirm Password">
               </div>
               <div class="form-group">
-                <p>YEAH</p>
-              </div>
+            <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#log-in-modal" class="register-opp">Already have an account?</a>
+          </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               <button type="submit" class="btn btn-default">Sign Up</button>
             </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">
+  Launch demo modal
+</button>
+
+<!-- Sign In Modal -->
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Catching Up</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-block " id="sign-in">
+            <div class="form-group">
+              <legend>Welcome Back!</legend>
+              <div class="form-group">
+              <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+              </div>
+              <div class="form-group">
+              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <p class="signUp"><a href="#">Don't Have an Account?</a><p>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Sign In</button>
           </form>
       </div>
     </div>

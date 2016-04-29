@@ -9,20 +9,13 @@ const signCheck = function() {
   $('#sign-up').on('submit', function(event){
     event.preventDefault();
     let data = getFormFields(this);
-    authApi.signUp(authUi.success, authUi.failure, data);
-
-    $('#myModal').modal('hide'); //hide modal after sign-in
-      return false;
+    authApi.signUp(authUi.signUpSuccess, authUi.failure, data);
   });
     $('#sign-in').on('submit', function(event){
       event.preventDefault();
       let data = getFormFields(this);
       console.log(data);
       authApi.signIn(authUi.signInSuccess, authUi.failure, data);
-
-      $('#myModal').modal('hide'); //hide modal after sign-in
-        return false;
-
     });
     $('#sign-out').on('click', function(event){
       event.preventDefault();

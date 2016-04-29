@@ -2,11 +2,20 @@
 
 const app = require('../app_data');
 
+const signUpSuccess = (data) => {
+  app.user = data.user;
+  // $('#eraseBoard').click();
+  console.log(app);
+  $('#myModal').modal('hide'); //hide modal after sign-up
+  $('.jumbotron').hide();
+  $('#sign-out').show();
+};
+
 const signInSuccess = (data) => {
   app.user = data.user;
   // $('#eraseBoard').click();
   console.log(app);
-  $('#userInfo').hide();
+  $('#myModal').modal('hide'); //hide modal after sign-in
   $('#sign-out').show();
 };
 
@@ -31,6 +40,7 @@ module.exports = {
   failure,
   success,
   signInSuccess,
+  signUpSuccess,
   signOutSuccess,
   app,
 };
