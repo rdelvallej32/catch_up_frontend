@@ -1,11 +1,23 @@
-<div class="allcontacts">
+<tr class="table-top-row">
+  <td>First Name</td>
+  <td>Last Name</td>
+  <td>Occupation</td>
+  <td>Professional Relationship</td>
+  <td>Last Contacted</td>
+  <td>Fact</td>
+</tr>
+<tr class="table-top-row">
   {{#each contacts}}
     {{#each this}}
-    <div class="contactboxes">
-  <p>{{this.company}}</p>
-    <p></p>
-  <p>{{this.last_name}}</p>
-  </div>
+  <tr>
+    <td>{{this.first_name}}</td>
+    <td>{{this.last_name}}</td>
+    <td>{{this.occupation}}</td>
+    <td>{{this.professional_relationship}}</td>
+    <td>{{this.last_contacted}}</td>
+    <td>{{this.fact}}</td>
+    <td><button type="button" class="btn btn-primary update-stock" data-contact-id="{{id}}" data-toggle="modal" data-target=".update-stock-modal">Update</button></td>
+    <td><button type="button" class="btn btn-danger delete-stock" data-contact-id="{{id}}">Delete</button></td>
+  </tr>
   {{/each}}
-  {{/each}}
-</div>
+{{/each}}
