@@ -13,7 +13,7 @@ const displayContacts = function(contacts){
   debugger;
   let contactListingTemplate = require('../templates/contact-listing.handlebars');
 
-    $('.content').append(contactListingTemplate({contacts}));
+    $('.table').append(contactListingTemplate({contacts}));
 };
 
 const success = (data) => {
