@@ -8,6 +8,7 @@ const contApi = require('./contact_api');
 const contUi = require('./contact_ui');
 
 const addHandlers = function() {
+  //Authentication Events//
   $('#sign-up').on('submit', function(event){
     event.preventDefault();
     let data = getFormFields(this);
@@ -28,11 +29,14 @@ const addHandlers = function() {
       let data = getFormFields(this);
       authApi.passwordChange(authUi.changePwSuccess, authUi.failure, data);
     });
+    //User / Contact Events
     $('#create-contact').on('submit', function (event) {
       event.preventDefault();
       let data = getFormFields(this);
       contApi.createContact(contUi.createContactSuccess, contUi.failure, data);
     });
+
+
     $('.signInTrigger').on('click', function(event) {
       event.preventDefault();
       $('#myModal').modal('hide');

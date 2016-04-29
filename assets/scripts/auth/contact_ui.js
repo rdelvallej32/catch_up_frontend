@@ -9,6 +9,13 @@ const createContactSuccess = (data) => {
   $(".modal-backdrop").hide();
 };
 
+const displayContacts = function(contacts){
+  debugger;
+  let contactListingTemplate = require('../templates/contact-listing.handlebars');
+
+    $('.content').append(contactListingTemplate({contacts}));
+};
+
 const success = (data) => {
   console.log(data);
   console.log("Buenisimo");
@@ -22,5 +29,6 @@ module.exports = {
   failure,
   success,
   createContactSuccess,
+  displayContacts,
   app
 };

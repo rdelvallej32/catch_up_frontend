@@ -16,8 +16,22 @@ const createContact = (success, failure, data) => {
   .fail(failure);
 };
 
+const getContacts = (success, failure) => {
+  $.ajax({
+    method: "GET",
+    url: app.api + '/contacts',
+    dataType: 'json',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+  })
+.done(success)
+.fail(failure);
+};
+
 
 module.exports = {
   createContact,
+  getContacts,
   app,
 };

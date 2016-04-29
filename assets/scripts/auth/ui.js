@@ -1,6 +1,8 @@
 'use strict';
 
 const app = require('../app_data');
+const contApi = require('./contact_api');
+const contUi = require('./contact_ui');
 
 const signUpSuccess = (data) => {
   app.user = data.user;
@@ -14,13 +16,17 @@ const signUpSuccess = (data) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  // $('#eraseBoard').click();
   console.log(app);
   $('#sign-in-modal').modal('hide'); //hide modal after sign-in
   $('.jumbotron').hide();
   $('.sign-out-trigger').show();
   $('.change-password-trigger').show();
   $('#createContactBtn').show();
+
+  // Should invoke the handlebars template if succesfull
+  debugger;
+  contApi.getContacts(contUi.displayContacts, contUi.failure);
+
 };
 
 const signOutSuccess = (data) => {

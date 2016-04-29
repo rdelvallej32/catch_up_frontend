@@ -1,9 +1,11 @@
 <div class="allcontacts">
   {{#each contacts}}
-  <div class="stuff">
-  <p>{{this.first_name}}</p>
+    {{#each this}}
+    <div class="contactboxes">
+  <p>{{this.company}}</p>
     <p></p>
   <p>{{this.last_name}}</p>
   </div>
+  {{/each}}
   {{/each}}
 </div>
