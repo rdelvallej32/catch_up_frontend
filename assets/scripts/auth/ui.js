@@ -17,15 +17,19 @@ const signInSuccess = (data) => {
   console.log(app);
   $('#sign-in-modal').modal('hide'); //hide modal after sign-in
   $('.jumbotron').hide();
-  $('#sign-out').show();
+  $('.sign-out-trigger').show();
+  $('.change-password-trigger').show();
 };
 
 const signOutSuccess = (data) => {
   console.log(data);
   app.user = null;
   console.log(data);
-  $('.user-name').html('');
-  $('#sign-out').hide();
+  $('#sign-out-modal').hide('hide');
+  $(".modal-backdrop").hide();
+  $('.jumbotron').show();
+  $('.sign-out-trigger').hide();
+  $('.change-password-trigger').hide();
 };
 
 const success = (data) => {

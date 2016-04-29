@@ -19,7 +19,7 @@ const addHandlers = function() {
     });
     $('#sign-out').on('click', function(event){
       event.preventDefault();
-      authApi.signOut(authUi.signOutSuccess, authUi.failure);
+      authApi.signOut(authUi.signOutSuccess, authUi.failure);  
     });
     $('#change-password').on('submit', function (event) {
       event.preventDefault();

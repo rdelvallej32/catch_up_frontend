@@ -9,4 +9,6 @@ const authEvents = require('./auth/events.js');
 // //
 $(() => {
   authEvents.addHandlers();
+  $('.sign-out-trigger').hide();
+  $('.change-password-trigger').hide();
 });

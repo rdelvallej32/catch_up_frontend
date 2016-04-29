@@ -50,8 +50,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li class="signInTrigger"><a href="#">Sign In</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#sign-out-modal">Sign out</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#change-pw-modal">Change password</a></li>
+            <li><a href="#" class="sign-out-trigger" data-toggle="modal" data-target="#sign-out-modal">Sign out</a></li>
+            <li><a href="#" class="change-password-trigger" data-toggle="modal" data-target="#change-pw-modal">Change password</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
 
@@ -149,6 +149,36 @@
   </div>
 </div>
 
+<!-- Change Password Modal -->
+<div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Catching Up</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-block " id="sign-in">
+            <div class="form-group">
+              <legend>Welcome Back!</legend>
+              <div class="form-group">
+              <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+              </div>
+              <div class="form-group">
+              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myModal" class="register-opp">Don't have an account?</a>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Sign Out Modal -->
 <div class="modal fade" id="sign-out-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -160,7 +190,7 @@
       <div class="modal-body">
             <div class="form-group">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Sign Out</button>
+            <button type="submit" class="btn btn-primary" id="sign-out">Sign Out</button>
       </div>
     </div>
   </div>
