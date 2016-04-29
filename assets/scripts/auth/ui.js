@@ -15,7 +15,8 @@ const signInSuccess = (data) => {
   app.user = data.user;
   // $('#eraseBoard').click();
   console.log(app);
-  $('#myModal').modal('hide'); //hide modal after sign-in
+  $('#sign-in-modal').modal('hide'); //hide modal after sign-in
+  $('.jumbotron').hide();
   $('#sign-out').show();
 };
 
