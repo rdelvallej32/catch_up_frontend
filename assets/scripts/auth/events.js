@@ -26,6 +26,11 @@ const addHandlers = function() {
       let data = getFormFields(this);
       authApi.passwordChange(authUi.changePwSuccess, authUi.failure, data);
     });
+    $('#create-contact').on('submit', function (event) {
+      event.preventDefault();
+      let data = getFormFields(this);
+      authApi.createContact(authUi.createContactSuccess, authUi.failure, data);
+    });
     $('.signInTrigger').on('click', function(event) {
       event.preventDefault();
       $('#myModal').modal('hide');
