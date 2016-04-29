@@ -4,6 +4,8 @@ const getFormFields = require('../../../lib/get-form-fields');
 
 const authApi = require('./api');
 const authUi = require('./ui');
+const contApi = require('./contact_ui');
+const contUi = require('./contact_api');
 
 const addHandlers = function() {
   $('#sign-up').on('submit', function(event){
@@ -29,7 +31,7 @@ const addHandlers = function() {
     $('#create-contact').on('submit', function (event) {
       event.preventDefault();
       let data = getFormFields(this);
-      authApi.createContact(authUi.createContactSuccess, authUi.failure, data);
+      contApi.createContact(contUi.createContactSuccess, contUi.failure, data);
     });
     $('.signInTrigger').on('click', function(event) {
       event.preventDefault();
