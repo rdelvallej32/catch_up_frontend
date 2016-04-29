@@ -83,6 +83,12 @@
       <table class="content">
       </table>
 
+      <!-- Create Contact Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" id="createContactBtn" data-toggle="modal" data-target="#create-contact-modal">
+            Add a Contact
+          </button>
+
+
 <!-- Sign Up Modal -->
 <div class="modal fade signUp" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -185,6 +191,39 @@
             <div class="form-group">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary" id="sign-out">Sign Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Create Contact Modal -->
+<div class="modal fade" id="create-contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add a New Contact</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-block " id="create-contact">
+            <div class="form-group">
+              <legend>Please Add Info About Your Contact!</legend>
+              <div class="form-group">
+              <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+              </div>
+              <div class="form-group">
+              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+              </div>
+              <div class="form-group">
+              <input type="password" class="form-control" name="credentials[password]" placeholder="Confirm Password">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Add Contact</button>
+            </div>
+          </form>
       </div>
     </div>
   </div>

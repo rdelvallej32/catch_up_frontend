@@ -19,12 +19,12 @@ const addHandlers = function() {
     });
     $('#sign-out').on('click', function(event){
       event.preventDefault();
-      authApi.signOut(authUi.signOutSuccess, authUi.failure);  
+      authApi.signOut(authUi.signOutSuccess, authUi.failure);
     });
     $('#change-password').on('submit', function (event) {
       event.preventDefault();
       let data = getFormFields(this);
-      authApi.passwordChange(authUi.success, authUi.failure, data);
+      authApi.passwordChange(authUi.changePwSuccess, authUi.failure, data);
     });
     $('.signInTrigger').on('click', function(event) {
       event.preventDefault();

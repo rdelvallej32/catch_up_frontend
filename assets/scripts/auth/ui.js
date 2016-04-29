@@ -32,6 +32,13 @@ const signOutSuccess = (data) => {
   $('.change-password-trigger').hide();
 };
 
+const changePwSuccess = (data) => {
+  console.log(data);
+  console.log("Password Change Clicked!");
+  $('#change-password-modal').hide('hide');
+  $(".modal-backdrop").hide();
+};
+
 const success = (data) => {
   console.log(data);
   console.log("Buenisimo");
@@ -47,5 +54,6 @@ module.exports = {
   signInSuccess,
   signUpSuccess,
   signOutSuccess,
+  changePwSuccess,
   app,
 };

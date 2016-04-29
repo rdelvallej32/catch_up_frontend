@@ -11,4 +11,5 @@ $(() => {
   authEvents.addHandlers();
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
+  $('#createContactBtn').hide();
 });
