@@ -9,6 +9,7 @@ const signUpSuccess = (data) => {
   $('#myModal').modal('hide'); //hide modal after sign-up
   $('.jumbotron').hide();
   $('#sign-out').show();
+  $('#createContactBtn').show();
 };
 
 const signInSuccess = (data) => {
@@ -19,6 +20,7 @@ const signInSuccess = (data) => {
   $('.jumbotron').hide();
   $('.sign-out-trigger').show();
   $('.change-password-trigger').show();
+  $('#createContactBtn').show();
 };
 
 const signOutSuccess = (data) => {
