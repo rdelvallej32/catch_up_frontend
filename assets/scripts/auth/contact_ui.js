@@ -10,10 +10,17 @@ const createContactSuccess = (data) => {
 };
 
 const displayContacts = function(contacts){
-  debugger;
   let contactListingTemplate = require('../templates/contact-listing.handlebars');
 
     $('.table').append(contactListingTemplate({contacts}));
+};
+
+const updateContactSuccess = (data) => {
+  console.log(data);
+  console.log("Buenisimo");
+  displayContacts();
+  $('#update-contact-modal').modal('hide');
+  $(".modal-backdrop").hide();
 };
 
 const success = (data) => {
@@ -29,6 +36,7 @@ module.exports = {
   failure,
   success,
   createContactSuccess,
+  updateContactSuccess,
   displayContacts,
   app
 };

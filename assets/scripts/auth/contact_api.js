@@ -29,9 +29,24 @@ const getContacts = (success, failure) => {
 .fail(failure);
 };
 
+const updateContact = (success, failure, data, id) => {
+  //if(!app.user) bad;
+  $.ajax({
+    method: "PATCH",
+    url: app.api + '/contacts/' + id,
+    data,
+    headers: {
+      Authorization: 'Token token='+ app.user.token,
+    },
+  })
+  .done(success)
+  .fail(failure);
+};
+
 
 module.exports = {
   createContact,
   getContacts,
+  updateContact,
   app,
 };
