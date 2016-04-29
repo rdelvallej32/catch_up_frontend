@@ -1,17 +1,17 @@
 'use strict';
 
-const app = require('../app_data');
+const app = require('../app_data.js');
 
 const createContact = (success, failure, data) => {
+  debugger;
   $.ajax({
     method: "POST",
     url: app.api + '/contacts',
+    dataType: 'json',
+    data,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
-    contentType: false,
-    processData: false,
-    data,
   })
   .done(success)
   .fail(failure);
