@@ -5,7 +5,7 @@ const getFormFields = require('../../../lib/get-form-fields');
 const authApi = require('./api');
 const authUi = require('./ui');
 
-const signCheck = function() {
+const addHandlers = function() {
   $('#sign-up').on('submit', function(event){
     event.preventDefault();
     let data = getFormFields(this);
@@ -26,10 +26,14 @@ const signCheck = function() {
       let data = getFormFields(this);
       authApi.passwordChange(authUi.success, authUi.failure, data);
     });
-
+    $('.signInTrigger').on('click', function(event) {
+      event.preventDefault();
+      $('#myModal').modal('hide');
+      $('#sign-in-modal').modal('show');
+    });
 
 };
 
 module.exports = {
-  signCheck,
+  addHandlers,
 };

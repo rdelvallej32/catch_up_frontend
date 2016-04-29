@@ -8,5 +8,5 @@ const authEvents = require('./auth/events.js');
 // // // require('./example');
 // //
 $(() => {
-  authEvents.signCheck();
+  authEvents.addHandlers();
 });
