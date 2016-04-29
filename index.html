@@ -208,16 +208,33 @@
       <div class="modal-body">
         <form class="form-block " id="create-contact">
             <div class="form-group">
-              <legend>Please Add Info About Your Contact!</legend>
+              <legend>First Name</legend>
               <div class="form-group">
-              <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+              <input type="text" class="form-control" name="contact[first_name]" placeholder="First Name">
               </div>
               <div class="form-group">
-              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+                <legend>Last Name</legend>
+              <input type="text" class="form-control" name="contact[last_name]" placeholder="Last_Name">
               </div>
               <div class="form-group">
-              <input type="password" class="form-control" name="credentials[password]" placeholder="Confirm Password">
+                <legend>Occupation</legend>
+              <input type="text" class="form-control" name="contact[occupation]" placeholder="Occupation">
               </div>
+              <div class="form-group">
+                <legend>Professional Relationship</legend>
+              <input type="text" class="form-control" name="contact[professional_relationship]" placeholder="Mentor, Coach, etc.">
+              </div>
+              <div class="form-group">
+                <legend>Company</legend>
+              <input type="text" class="form-control" name="contact[company]" placeholder="Company">
+              </div>
+              <div class="form-group">
+                <legend>Last Time Contacted</legend>
+              <input type="date" class="form-control" name="contact[last_contacted]">
+              </div>
+              <div class="form-group">
+                <legend>Fact</legend>
+              <input type="text" class="form-control" name="contact[fact]" placeholder="e.g Loves the NFL Bears">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
