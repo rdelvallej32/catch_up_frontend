@@ -5,6 +5,8 @@ const app = require('../app_data.js');
 const createContactSuccess = (data) => {
   console.log(data);
   console.log("Buenisimo");
+  $('#create-contact-modal').modal('hide');
+  $(".modal-backdrop").hide();
 };
 
 const success = (data) => {

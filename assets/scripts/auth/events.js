@@ -29,7 +29,6 @@ const addHandlers = function() {
       authApi.passwordChange(authUi.changePwSuccess, authUi.failure, data);
     });
     $('#create-contact').on('submit', function (event) {
-      debugger;
       event.preventDefault();
       let data = getFormFields(this);
       contApi.createContact(contUi.createContactSuccess, contUi.failure, data);

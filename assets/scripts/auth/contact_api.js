@@ -3,7 +3,6 @@
 const app = require('../app_data.js');
 
 const createContact = (success, failure, data) => {
-  debugger;
   $.ajax({
     method: "POST",
     url: app.api + '/contacts',
