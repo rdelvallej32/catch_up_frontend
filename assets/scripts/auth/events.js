@@ -38,14 +38,14 @@ const addHandlers = function() {
 
     $('#update-contact').on('submit', function (event) {
       event.preventDefault();
-      let id = $(event.target).attr("data-contact-id");
+      let id = $(".update-contact-btn").attr("data-contact-id");
       let data = getFormFields(this);
       contApi.updateContact(contUi.updateContactSuccess, contUi.failure, data, id);
     });
 
-    $('.table').on('click', '.update-contact', function(event){
-      event.preventDefault();
-      let id = $(event.target).attr("data-contact-id");
+    $('.table').on('click', '.update-contact', function(e){
+      e.preventDefault();
+      let id = $(e.target).attr("data-contact-id");
       $(".update-contact-btn").attr("data-contact-id", id);
   });
 
