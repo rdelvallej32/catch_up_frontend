@@ -45,6 +45,13 @@ const failure = (error) => {
   console.error(error);
 };
 
+const formatDate = (contact) => {
+    let stringToParse = contact.last_contacted;
+    let dateString = stringToParse.match(/\d{4}\/\d{2}\/\d{2}/);
+    return new Date(dateString);
+
+};
+
 module.exports = {
   failure,
   success,
@@ -52,5 +59,6 @@ module.exports = {
   updateContactSuccess,
   deleteContactSuccess,
   displayContacts,
+  formatDate,
   app
 };
