@@ -29,11 +29,12 @@ const getContacts = (success, failure) => {
 .fail(failure);
 };
 
-const updateContact = (success, failure, data, id) => {
+//Sends a Patch Request to Update Contact
+const updateContact = (success, failure, data, contact_id) => {
   //if(!app.user) bad;
   $.ajax({
     method: "PATCH",
-    url: app.api + '/contacts/' + id,
+    url: app.api + '/contacts/' + contact_id,
     data,
     headers: {
       Authorization: 'Token token='+ app.user.token,
@@ -43,10 +44,23 @@ const updateContact = (success, failure, data, id) => {
   .fail(failure);
 };
 
+const deleteContact = (success, failure, contact_id) => {
+    $.ajax({
+      url: app.api + '/contacts/' + contact_id,
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Token token=' + app.user.token,
+      },
+    })
+    .done(success)
+    .fail(failure);
+  };
+
 
 module.exports = {
   createContact,
   getContacts,
   updateContact,
+  deleteContact,
   app,
 };
