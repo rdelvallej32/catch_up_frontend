@@ -24,7 +24,7 @@ const signInSuccess = (data) => {
   $('#createContactBtn').show();
 
   // Should invoke the handlebars template if succesfull
-  contApi.getContacts(contUi.displayContacts, contUi.failure);
+  contApi.getContacts(contUi.showContactsSuccess, contUi.failure);
 
 };
 
