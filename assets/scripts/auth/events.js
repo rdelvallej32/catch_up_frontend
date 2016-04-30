@@ -42,11 +42,18 @@ const addHandlers = function() {
       let data = getFormFields(this);
       contApi.updateContact(contUi.updateContactSuccess, contUi.failure, data, id);
     });
+
     //adds a contact id to the submit button
     $('.table').on('click', '.update-contact', function(event){
       event.preventDefault();
       let id = $(event.target).attr("data-contact-id");
       $(".update-contact-btn").attr("data-contact-id", id);
+  });
+
+  $('.delete-contact-btn').on('click', function (event) {
+    event.preventDefault();
+    let id = $(this).attr("data-contact-id");
+    contApi.deleteContact(contUi.deleteContactSuccess, contUi.failure, id);
   });
 
   //adds a contact id to the delete button
@@ -55,6 +62,8 @@ const addHandlers = function() {
     let id = $(event.target).attr("data-contact-id");
     $(".delete-contact-btn").attr("data-contact-id", id);
 });
+
+
 
     $('.signInTrigger').on('click', function(event) {
       event.preventDefault();
