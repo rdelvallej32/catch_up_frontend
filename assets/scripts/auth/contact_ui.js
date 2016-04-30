@@ -21,6 +21,7 @@ const displayContacts = function(contacts){
 const updateContactSuccess = (data) => {
   console.log(data);
   console.log("Buenisimo");
+  ///need to render contacts table because of async -- crazy
   displayContacts();
   $('#update-contact-modal').modal('hide');
   $(".modal-backdrop").hide();

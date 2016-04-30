@@ -8,7 +8,7 @@ const contApi = require('./contact_api');
 const contUi = require('./contact_ui');
 
 const addHandlers = function() {
-  //Authentication Events//
+  //-----------Authentication Events-----------//
   $('#sign-up').on('submit', function(event){
     event.preventDefault();
     let data = getFormFields(this);
@@ -29,20 +29,20 @@ const addHandlers = function() {
       let data = getFormFields(this);
       authApi.passwordChange(authUi.changePwSuccess, authUi.failure, data);
     });
-    //User / Contact Events
+    //--------------User / Contact Events----------------//
     $('#create-contact').on('submit', function (event) {
       event.preventDefault();
       let data = getFormFields(this);
       contApi.createContact(contUi.createContactSuccess, contUi.failure, data);
     });
-
+    //updates the specific contact once a submission event occurs
     $('#update-contact').on('submit', function (event) {
       event.preventDefault();
       let id = $(".update-contact-btn").attr("data-contact-id");
       let data = getFormFields(this);
       contApi.updateContact(contUi.updateContactSuccess, contUi.failure, data, id);
     });
-
+    //adds a contact id to the submit button
     $('.table').on('click', '.update-contact', function(e){
       e.preventDefault();
       let id = $(e.target).attr("data-contact-id");
