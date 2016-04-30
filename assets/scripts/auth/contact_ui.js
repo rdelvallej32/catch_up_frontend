@@ -11,11 +11,11 @@ const displayContacts = function(contacts){
 };
 
 const showContactsSuccess = (data) => {
-  // console.log(data);
   app.contacts = data.contacts;
   // app.contacts.forEach(formatDate);
   displayContacts(data);
   console.log(app.contacts);
+  // console.log(app.contacts.forEach(formatDate));
 };
 
 const success = (data) => {
@@ -37,9 +37,14 @@ const createContactSuccess = (data) => {
 };
 
 const formatDate = (contact) => {
-    let stringToParse = contact.last_contacted;
-    let dateString = stringToParse.match(/\d{4}\/\d{2}\/\d{2}\s+\d{2}:\d{2}/);
-    console.log(new Date(dateString));
+    console.log(contact.last_contacted);
+//     let s = contact.last_contacted;
+//     if (typeof s === 'string') {
+//       function reverse(s) {
+//         return (s === '') ? '' : reverse(s.substr(1)) + s.charAt(0);
+// }
+//     }
+    // let dateString = stringToParse.match(/\d{4}\/\d{2}\/\d{2}/);
 
 };
 
