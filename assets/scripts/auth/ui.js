@@ -37,6 +37,8 @@ const signOutSuccess = (data) => {
   $('.jumbotron').show();
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
+  $('.table').empty();
+  $('#createContactBtn').hide();
 };
 
 const changePwSuccess = (data) => {

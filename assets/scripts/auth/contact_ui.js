@@ -5,7 +5,7 @@ const app = require('../app_data.js');
 //UI the handles succesfully creating a contact
 const createContactSuccess = (data) => {
   console.log(data);
-  console.log("Buenisimo");
+  console.log("created contact!");
   $('#create-contact-modal').modal('hide');
   $(".modal-backdrop").hide();
 };
@@ -20,7 +20,7 @@ const displayContacts = function(contacts){
 //UI the handles succesfully updating a contact
 const updateContactSuccess = (data) => {
   console.log(data);
-  console.log("Buenisimo");
+  console.log("updated contact!");
   ///need to render contacts table because of async -- crazy
   displayContacts();
   $('#update-contact-modal').modal('hide');
@@ -30,7 +30,7 @@ const updateContactSuccess = (data) => {
 //UI the handles succesfully deleting a contact
 const deleteContactSuccess = (data) => {
   console.log(data);
-  console.log("Buenisimo");
+  console.log("deleted contact!");
   displayContacts();
   $('#delete-contact-modal').modal('hide');
   $(".modal-backdrop").hide();
