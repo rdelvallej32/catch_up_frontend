@@ -2,6 +2,7 @@
 
 const app = require('../app_data.js');
 
+//sends a post request to create a new contact associated to the user
 const createContact = (success, failure, data) => {
   $.ajax({
     method: "POST",
@@ -16,6 +17,7 @@ const createContact = (success, failure, data) => {
   .fail(failure);
 };
 
+//Send an Get request to index all the contacts associated to the user
 const getContacts = (success, failure) => {
   $.ajax({
     method: "GET",
@@ -44,6 +46,7 @@ const updateContact = (success, failure, data, contact_id) => {
   .fail(failure);
 };
 
+//sends a delete request to delete a contact associated to the user
 const deleteContact = (success, failure, contact_id) => {
     $.ajax({
       url: app.api + '/contacts/' + contact_id,
