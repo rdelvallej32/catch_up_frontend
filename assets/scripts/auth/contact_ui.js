@@ -34,14 +34,15 @@ const formatDate = (contact) => {
   //user.reminder = data.reminder
   let oldDate = new Date(contact.last_contacted);
 
-  let reminder = dateAdd(oldDate, 'month', 1);
+  let reminder = dateAdd(oldDate, 'month', contact.reminder);
 
   let today = new Date();
 
   if(reminder <= today) {
     $('.reminder').fadeIn(1200);
     $('.reminder').append("Find some time to catch up with " + contact.first_name +
-    " " + contact.last_name + ", it has been over a month, since your last contact!");
+    " " + contact.last_name + ", it has been over " + contact.reminder + " " +
+    "month(s), since your last contact!");
   }
 
   console.log(today);
