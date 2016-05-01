@@ -12,4 +12,5 @@ $(() => {
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
   $('#createContactBtn').hide();
+  $('.reminder').hide();
 });

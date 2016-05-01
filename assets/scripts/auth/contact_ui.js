@@ -39,7 +39,9 @@ const formatDate = (contact) => {
   let today = new Date();
 
   if(reminder <= today) {
-    console.log("I think you should talk to " + contact.first_name + "!");
+    $('.reminder').fadeIn(1200);
+    $('.reminder').append("Find some time to catch up with " + contact.first_name +
+    " " + contact.last_name + ", it has been over a month, since your last contact!");
   }
 
   console.log(today);
