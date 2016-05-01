@@ -1,17 +1,17 @@
 'use strict';
 
 const app = require('../app_data');
+const authApi = require('./api.js');
 const contApi = require('./contact_api');
 const contUi = require('./contact_ui');
 
-const signUpSuccess = (data) => {
-  app.user = data.user;
-  // $('#eraseBoard').click();
-  console.log(app);
-  $('#myModal').modal('hide'); //hide modal after sign-up
-  $('.jumbotron').hide();
-  $('#sign-out').show();
-  $('#createContactBtn').show();
+const success = (data) => {
+  console.log(data);
+  console.log("Buenisimo");
+};
+
+const failure = (error) => {
+  console.error(error);
 };
 
 const signInSuccess = (data) => {
@@ -26,6 +26,13 @@ const signInSuccess = (data) => {
   // Should invoke the handlebars template if succesfull
   contApi.getContacts(contUi.showContactsSuccess, contUi.failure);
 
+};
+
+const signUpSuccess = (data) => {
+  app.user = data.user;
+  // $('#eraseBoard').click();
+  console.log(app);
+  $('#myModal').modal('hide'); //hide modal after sign-up
 };
 
 const signOutSuccess = (data) => {
@@ -46,15 +53,6 @@ const changePwSuccess = (data) => {
   console.log("Password Change Clicked!");
   $('#change-password-modal').hide('hide');
   $(".modal-backdrop").hide();
-};
-
-const success = (data) => {
-  console.log(data);
-  console.log("Buenisimo");
-};
-
-const failure = (error) => {
-  console.error(error);
 };
 
 module.exports = {

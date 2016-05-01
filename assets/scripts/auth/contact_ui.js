@@ -13,19 +13,19 @@ const displayContacts = function(contacts) {
 };
 
 const dateAdd = (date, interval, units) => {
-    var ret = new Date(date); //don't change original date
-    switch (interval.toLowerCase()) {
-      case 'year':
-        ret.setFullYear(ret.getFullYear() + units);
-        break;
-      case 'month':
-        ret.setMonth(ret.getMonth() + 1 * units);
-        break;
-      default:
-        ret = undefined;
-        break;
-    }
-    return ret;
+  var ret = new Date(date); //don't change original date
+  switch (interval.toLowerCase()) {
+    case 'year':
+      ret.setFullYear(ret.getFullYear() + units);
+      break;
+    case 'month':
+      ret.setMonth(ret.getMonth() + 1 * units);
+      break;
+    default:
+      ret = undefined;
+      break;
+  }
+  return ret;
 };
 
 const formatDate = (contact) => {
@@ -38,11 +38,11 @@ const formatDate = (contact) => {
 
   let today = new Date();
 
-  if(reminder <= today) {
+  if (reminder <= today) {
     $('.reminder').fadeIn(1200);
     $('.reminder').append("Find some time to catch up with " + contact.first_name +
-    " " + contact.last_name + ", it has been over " + contact.reminder + " " +
-    "month(s), since your last contact!");
+      " " + contact.last_name + ", it has been over " + contact.reminder + " " +
+      "month(s), since your last contact!");
   }
 
   console.log(today);
