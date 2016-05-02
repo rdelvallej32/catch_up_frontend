@@ -2,6 +2,16 @@
 
 const app = require('../app_data.js');
 const contApi = require('./contact_api.js');
+const authApi = require('./api.js');
+
+const success = (data) => {
+  console.log(data);
+  console.log("Buenisimo");
+};
+
+const failure = (error) => {
+  console.error(error);
+};
 
 //Function to invoke the handlebars template
 const displayContacts = function(contacts) {
@@ -43,6 +53,9 @@ const formatDate = (contact) => {
     $('.reminder').append("Find some time to catch up with " + contact.first_name +
       " " + contact.last_name + ", it has been over " + contact.reminder + " " +
       "month(s), since your last contact!");
+
+      //Test Twilio notification
+      authApi.notifyUser(success, failure);
   }
 
   console.log(today);
@@ -57,15 +70,6 @@ const showContactsSuccess = (data) => {
   displayContacts(data);
   console.log(app.contacts);
   app.contacts.forEach(formatDate);
-};
-
-const success = (data) => {
-  console.log(data);
-  console.log("Buenisimo");
-};
-
-const failure = (error) => {
-  console.error(error);
 };
 
 //UI the handles succesfully creating a contact

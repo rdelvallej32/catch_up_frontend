@@ -50,10 +50,25 @@ const passwordChange = (success, failure, data) => {
   .fail(failure);
 };
 
+const notifyUser = (success, failure) => {
+
+  $.ajax({
+    method: "POST",
+    url: app.api + '/profiles/notify',
+      data: {
+        'foo': 'bar'
+      }
+  })
+  .done(success)
+  .fail(failure);
+
+};
+
 module.exports = {
   signUp,
   signIn,
   signOut,
   passwordChange,
+  notifyUser,
   app,
 };
