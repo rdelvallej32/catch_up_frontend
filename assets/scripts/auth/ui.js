@@ -33,7 +33,11 @@ const signInSuccess = (data) => {
 };
 
 const signUpSuccess = (data) => {
+  debugger;
+  //Should invoke sign-in ajax call to sign user in after sign up
+  // authApi.signIn(signInSuccess, failure, data);
   app.user = data.user;
+  console.log(data);
   // $('#eraseBoard').click();
   console.log(app);
   $('#myModal').modal('hide'); //hide modal after sign-up
@@ -41,6 +45,10 @@ const signUpSuccess = (data) => {
   $( '#sign-up' ).each(function(){
     this.reset();
   });
+
+  console.log(app.user);
+
+
 };
 
 const signOutSuccess = (data) => {
