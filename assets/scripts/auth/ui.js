@@ -21,6 +21,7 @@ const signInSuccess = (data) => {
   $('.header').hide();
   $('.sign-out-trigger').show();
   $('.signInTrigger').hide();
+  $('.intro').hide();
   $('.change-password-trigger').show();
   $('#createContactBtn').show();
   $( '#sign-in' ).each(function(){
@@ -38,7 +39,6 @@ const signUpSuccess = (data) => {
   // authApi.signIn(signInSuccess, failure, data);
   app.user = data.user;
   console.log(data);
-  // $('#eraseBoard').click();
   console.log(app);
   $('#myModal').modal('hide'); //hide modal after sign-up
   $('.signInTrigger').show();
@@ -57,6 +57,7 @@ const signOutSuccess = (data) => {
   console.log(data);
   $('#sign-out-modal').hide('hide');
   $(".modal-backdrop").hide();
+  $('.intro').show();
   $('body').removeClass('modal-open');
   $('.header').show();
   $('.sign-out-trigger').hide();
