@@ -78,6 +78,9 @@ const createContactSuccess = (data) => {
   console.log("created contact!");
   $('#create-contact-modal').modal('hide');
   $(".modal-backdrop").hide();
+  $( '#create-contact' ).each(function(){
+    this.reset();
+  });
   contApi.getContacts(showContactsSuccess, failure);
 };
 
