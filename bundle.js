@@ -313,7 +313,6 @@ webpackJsonp([0],[
 	};
 
 	var signUpSuccess = function signUpSuccess(data) {
-	  debugger;
 	  //Should invoke sign-in ajax call to sign user in after sign up
 	  // authApi.signIn(signInSuccess, failure, data);
 	  app.user = data.user;
