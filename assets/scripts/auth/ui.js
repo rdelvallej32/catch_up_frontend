@@ -49,6 +49,7 @@ const signOutSuccess = (data) => {
   console.log(data);
   $('#sign-out-modal').hide('hide');
   $(".modal-backdrop").hide();
+  $('body').removeClass('modal-open');
   $('.header').show();
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
@@ -63,6 +64,7 @@ const changePwSuccess = (data) => {
   console.log("Password Change Clicked!");
   $('#change-password-modal').hide('hide');
   $(".modal-backdrop").hide();
+  $('body').removeClass('modal-open');
   $( '#change-password' ).each(function(){
     this.reset();
   });
