@@ -18,7 +18,7 @@ const signInSuccess = (data) => {
   app.user = data.user;
   console.log(app);
   $('#sign-in-modal').modal('hide'); //hide modal after sign-in
-  $('.jumbotron').hide();
+  $('.header').hide();
   $('.sign-out-trigger').show();
   $('.change-password-trigger').show();
   $('#createContactBtn').show();
@@ -41,7 +41,7 @@ const signOutSuccess = (data) => {
   console.log(data);
   $('#sign-out-modal').hide('hide');
   $(".modal-backdrop").hide();
-  $('.jumbotron').show();
+  $('.header').show();
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
   $('.table').empty();
