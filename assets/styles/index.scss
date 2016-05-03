@@ -48,7 +48,7 @@ img {
   h1 {
     color: $off-white;
     font-size: 80px;
-    padding: 10px;
+    padding-bottom:: 5px;
   }
 
   p {
@@ -81,4 +81,10 @@ img {
   font-weight: bold;
   padding-top: 5%;
   text-align: center;
+}
+
+///Css for handlebars template
+
+.table-top-row {
+  font-weight: bold;
 }
