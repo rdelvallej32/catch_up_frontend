@@ -20,6 +20,7 @@ const signInSuccess = (data) => {
   $('#sign-in-modal').modal('hide'); //hide modal after sign-in
   $('.header').hide();
   $('.sign-out-trigger').show();
+  $('.signInTrigger').hide();
   $('.change-password-trigger').show();
   $('#createContactBtn').show();
 

@@ -1,9 +1,24 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'colors';
+@import 'typography';
+
+body {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+img {
+  filter: alpha(opacity = 40); //* For IE8 and earlier */
+  opacity: .4;
+  }
 
 .header {
   background: url('/assets/img/Catch_up_background.jpg');
-  padding-bottom: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 150px;
   padding-top: 200px;
   text-align: center;
 }
@@ -13,5 +28,17 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   text-align: center;
 }
 
-.intro {
+.intro-message {
+  padding-bottom: 50px;
+  padding-left: 60px;
+  text-align: left;
+
+  h1 {
+    color: $off-white;
+    font-size: 80px;
+  }
+
+  p {
+    color: $off-white;
+  }
 }
