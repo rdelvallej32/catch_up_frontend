@@ -23,6 +23,9 @@ const signInSuccess = (data) => {
   $('.signInTrigger').hide();
   $('.change-password-trigger').show();
   $('#createContactBtn').show();
+  $( '#sign-in' ).each(function(){
+    this.reset();
+});
 
   // Should invoke the handlebars template if succesfull
   contApi.getContacts(contUi.showContactsSuccess, contUi.failure);
@@ -35,6 +38,9 @@ const signUpSuccess = (data) => {
   console.log(app);
   $('#myModal').modal('hide'); //hide modal after sign-up
   $('.signInTrigger').show();
+  $( '#sign-up' ).each(function(){
+    this.reset();
+  });
 };
 
 const signOutSuccess = (data) => {
@@ -57,6 +63,9 @@ const changePwSuccess = (data) => {
   console.log("Password Change Clicked!");
   $('#change-password-modal').hide('hide');
   $(".modal-backdrop").hide();
+  $( '#change-password' ).each(function(){
+    this.reset();
+  });
 };
 
 module.exports = {
