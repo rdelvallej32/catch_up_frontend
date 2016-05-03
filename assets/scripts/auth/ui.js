@@ -34,6 +34,7 @@ const signUpSuccess = (data) => {
   // $('#eraseBoard').click();
   console.log(app);
   $('#myModal').modal('hide'); //hide modal after sign-up
+  $('.signInTrigger').show();
 };
 
 const signOutSuccess = (data) => {
@@ -48,6 +49,7 @@ const signOutSuccess = (data) => {
   $('.table').empty();
   $('#createContactBtn').hide();
   $('.reminder').hide();
+  $('.signInTrigger').show();
 };
 
 const changePwSuccess = (data) => {
