@@ -18,6 +18,13 @@ img {
   padding-right: 5%;
 }
 
+.modal {
+  .modal-title {
+    text-align: center;
+  }
+}
+
+
 .header {
   background: url('/assets/img/Catch_up_background.jpg');
   background-position: center;
@@ -41,10 +48,13 @@ img {
   h1 {
     color: $off-white;
     font-size: 80px;
+    padding: 10px;
   }
 
   p {
     color: $off-white;
+    font-size: 20px;
+    padding-bottom: 10px;
   }
 }
 
