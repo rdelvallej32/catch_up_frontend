@@ -21,8 +21,12 @@ const signInSuccess = (data) => {
   $('.header').hide();
   $('.sign-out-trigger').show();
   $('.signInTrigger').hide();
+  $('.intro').hide();
   $('.change-password-trigger').show();
   $('#createContactBtn').show();
+  $( '#sign-in' ).each(function(){
+    this.reset();
+});
 
   // Should invoke the handlebars template if succesfull
   contApi.getContacts(contUi.showContactsSuccess, contUi.failure);
@@ -30,10 +34,21 @@ const signInSuccess = (data) => {
 };
 
 const signUpSuccess = (data) => {
+  debugger;
+  //Should invoke sign-in ajax call to sign user in after sign up
+  // authApi.signIn(signInSuccess, failure, data);
   app.user = data.user;
-  // $('#eraseBoard').click();
+  console.log(data);
   console.log(app);
   $('#myModal').modal('hide'); //hide modal after sign-up
+  $('.signInTrigger').show();
+  $( '#sign-up' ).each(function(){
+    this.reset();
+  });
+
+  console.log(app.user);
+
+
 };
 
 const signOutSuccess = (data) => {
@@ -42,12 +57,15 @@ const signOutSuccess = (data) => {
   console.log(data);
   $('#sign-out-modal').hide('hide');
   $(".modal-backdrop").hide();
+  $('.intro').show();
+  $('body').removeClass('modal-open');
   $('.header').show();
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
   $('.table').empty();
   $('#createContactBtn').hide();
   $('.reminder').hide();
+  $('.signInTrigger').show();
 };
 
 const changePwSuccess = (data) => {
@@ -55,6 +73,10 @@ const changePwSuccess = (data) => {
   console.log("Password Change Clicked!");
   $('#change-password-modal').hide('hide');
   $(".modal-backdrop").hide();
+  $('body').removeClass('modal-open');
+  $( '#change-password' ).each(function(){
+    this.reset();
+  });
 };
 
 module.exports = {
