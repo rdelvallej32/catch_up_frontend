@@ -1,11 +1,17 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-.jumbotron {
+.header {
+  background: url('/assets/img/Catch_up_background.jpg');
+  padding-bottom: 200px;
+  padding-top: 200px;
   text-align: center;
 }
 
 .reminder {
   font-size: 20px;
   text-align: center;
+}
+
+.intro {
 }

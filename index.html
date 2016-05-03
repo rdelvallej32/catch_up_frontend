@@ -7,7 +7,7 @@
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -62,14 +62,16 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>...</p>
-  <p>    <!-- Sign Up Button trigger modal -->
+<div class="intro">
+<div class="header">
+  <h1>Catch Up</h1>
+  <p>The web app that keeps you in touch with your networks</p>
+    <p>  <!-- Sign Up Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Create a Free Account
 </button>
 </p>
+</div>
 </div>
 
 <div class="alert alert-danger alert-dismissible reminder" role="alert">
@@ -115,10 +117,10 @@
               <input type="password" class="form-control" name="credentials[password]" placeholder="Confirm Password">
               </div>
               <div class="form-group">
-              <input type="password" class="form-control" name="credentials[username]" placeholder="Confirm Username">
+              <input type="text" class="form-control" name="credentials[username]" placeholder="Confirm Username">
               </div>
               <div class="form-group">
-              <input type="password" class="form-control" name="credentials[phone_number]" placeholder="Confirm Phone Number">
+              <input type="text" class="form-control" name="credentials[phone_number]" placeholder="Confirm Phone Number">
               </div>
               <div class="form-group">
             <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal" class="register-opp">Already have an account?</a>

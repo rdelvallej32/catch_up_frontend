@@ -55,7 +55,7 @@ const formatDate = (contact) => {
       "month(s), since your last contact!");
 
       //Test Twilio notification
-      authApi.notifyUser(success, failure);
+      // authApi.notifyUser(success, failure);
   }
 
   console.log(today);

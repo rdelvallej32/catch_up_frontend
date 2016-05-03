@@ -25,7 +25,7 @@ const signInSuccess = (data) => {
 
   // Should invoke the handlebars template if succesfull
   contApi.getContacts(contUi.showContactsSuccess, contUi.failure);
-  
+
 };
 
 const signUpSuccess = (data) => {
@@ -46,6 +46,7 @@ const signOutSuccess = (data) => {
   $('.change-password-trigger').hide();
   $('.table').empty();
   $('#createContactBtn').hide();
+  $('.reminder').hide();
 };
 
 const changePwSuccess = (data) => {
